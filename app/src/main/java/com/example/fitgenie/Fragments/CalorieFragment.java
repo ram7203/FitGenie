@@ -100,7 +100,7 @@ public class CalorieFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                callapi();
+                callapi();
                 if(editText.getText().toString().trim().equals("1 egg"))
                 {
                     res.setText("1 egg 6g of protein");
@@ -134,10 +134,10 @@ public class CalorieFragment extends Fragment {
 
         RequestBody body = RequestBody.create(jsonBody.toString(), JSON);
         Request request = new Request.Builder()
-                .url("https://www.strongrfastr.com/app/meal_plan_setup/1")
-                .header("x-app-id", "eea2b752")
-                .header( "x-app-key", "b2b52f97c1a573536c5a8a0e2ff76d03")
-                .header("Content-Type", "application/json")
+                .url("https://trackapi.nutritionix.com/v2/natural/nutrients")
+                .addHeader("x-app-id", "eea2b752")
+                .addHeader( "x-app-key", "b2b52f97c1a573536c5a8a0e2ff76d03")
+                .addHeader("Content-Type", "application/json")
                 .post(body)
                 .build();
 

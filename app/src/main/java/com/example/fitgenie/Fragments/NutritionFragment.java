@@ -85,16 +85,9 @@ public class NutritionFragment extends Fragment {
         webView.getSettings().setAllowContentAccess(true);
         webView.getSettings().setDomStorageEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-//        webView.loadUrl("https://www.strongrfastr.com/app/meal_plan/current");
         webView.loadUrl("https://www.strongrfastr.com/app/meal_plan_setup/1");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 
-        assistant.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                home.replacefragment(new AssistantFragment());
-            }
-        });
     }
 }
